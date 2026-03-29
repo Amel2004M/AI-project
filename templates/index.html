@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Text Summarizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🤖 AI Text Summarizer</h1>
+      <p class="subtitle">Paste any text below and get an AI-generated summary instantly.</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <label for="inputText" class="label">Input Text</label>
+        <textarea
+          id="inputText"
+          placeholder="Enter or paste your text here (at least 30 words)…"
+          rows="10"
+        ></textarea>
+        <div class="word-count" id="wordCount">0 words</div>
+        <button id="summarizeBtn" class="btn" onclick="summarize()">Summarize</button>
+      </div>
+
+      <div class="card result-card" id="resultCard" hidden>
+        <label class="label">Summary</label>
+        <div id="summaryText" class="summary-box"></div>
+        <button class="btn btn-secondary" onclick="copyToClipboard()">📋 Copy Summary</button>
+      </div>
+
+      <div class="card error-card" id="errorCard" hidden>
+        <p id="errorText" class="error-message"></p>
+      </div>
+
+      <div class="loading" id="loading" hidden>
+        <div class="spinner"></div>
+        <p>Generating summary…</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const inputText = document.getElementById('inputText');
+    const wordCount = document.getElementById('wordCount');
+    const summarizeBtn = document.getElementById('summarizeBtn');
+    const resultCard = document.getElementById('resultCard');
+    const errorCard = document.getElementById('errorCard');
+    const loading = document.getElementById('loading');
+
+    inputText.addEventListener('input', () => {
+      const words = inputText.value.trim().split(/\s+/).filter(w => w.length > 0);
+      wordCount.textContent = `${words.length} word${words.length !== 1 ? 's' : ''}`;
+    });
+
+    async function summarize() {
+      const text = inputText.value.trim();
+      if (!text) return;
+
+      resultCard.hidden = true;
+      errorCard.hidden = true;
+      loading.hidden = false;
+      summarizeBtn.disabled = true;
+
+      try {
+        const response = await fetch('/summarize', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text }),
+        });
+        const data = await response.json();
+
+        if (!response.ok || data.error) {
+          showError(data.error || 'An unexpected error occurred.');
+        } else {
+          document.getElementById('summaryText').textContent = data.summary;
+          resultCard.hidden = false;
+        }
+      } catch {
+        showError('Network error. Please check your connection and try again.');
+      } finally {
+        loading.hidden = true;
+        summarizeBtn.disabled = false;
+      }
+    }
+
+    function showError(msg) {
+      document.getElementById('errorText').textContent = msg;
+      errorCard.hidden = false;
+    }
+
+    function copyToClipboard() {
+      const text = document.getElementById('summaryText').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.btn-secondary');
+        const original = btn.textContent;
+        btn.textContent = '✅ Copied!';
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
