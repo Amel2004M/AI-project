@@ -1,4 +1,4 @@
-# AI Text Summarizer
+# AI Text Summarizer with LLM
 
 A web-based AI tool that receives any text and returns a concise summary, powered by [facebook/bart-large-cnn](https://huggingface.co/facebook/bart-large-cnn) via HuggingFace Transformers.
 
