@@ -1,11 +1,11 @@
-label{
+.sign-in label{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: flex-start;
 }
 
-input{
+.sign-in input{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 420px;
@@ -18,7 +18,7 @@ input{
     align-items: center;
 }
 
-input::placeholder{
+.sign-in input::placeholder{
     font-style: normal;
     font-weight: 400;
     color: #939393;
@@ -26,14 +26,14 @@ input::placeholder{
     padding-left: 35px;
 }
  
-.input_grp {
+.sign-in .input_grp {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
 }
 
-p{
+.sign-in p{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
@@ -41,7 +41,7 @@ p{
     line-height: normal;
 }
 
-.SignUp{
+.sign-in .SignUp{
     color: #783B90;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
@@ -50,7 +50,7 @@ p{
     text-decoration: none;
 }
 
-.forgot-link{
+.sign-in .forgot-link{
     font-style: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;

@@ -1,4 +1,4 @@
-input{
+.verify-code input{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 70px;
@@ -11,21 +11,21 @@ input{
     gap: 12px;
 }
 
-input::placeholder{
+.verify-code input::placeholder{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     padding-left: 35px;
 }
  
-.input_grp {
+.verify-code .input_grp {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
 }
 
-p{
+.verify-code p{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
@@ -33,7 +33,7 @@ p{
     line-height: normal;
 }
 
-.ResendCode{
+.verify-code .ResendCode{
     color: #7BEBFF;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;

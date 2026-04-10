@@ -6,7 +6,7 @@ import Template from "../components/Template.jsx"
 const VerifyCode =  () => {
 
     return(
-        <div>
+        <div className="verify-code">
             <Template title="Verify Code" button_text="Verify" navigateTo="/resetting-password">
                 <p>Please enter the code we just sent to your email</p>
                 <div className='input_grp'>

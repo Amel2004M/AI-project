@@ -6,7 +6,7 @@ import Template from "../components/Template.jsx"
 const SignIn =  () => {
 
     return(
-        <div>
+        <div className="sign-in">
             <Template title="Sign In" button_text="Sign In" navigateTo="/signin">
                 <div className='input_grp'>
                   <label htmlFor="E-mail">E-mail adress</label>

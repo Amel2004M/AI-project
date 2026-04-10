@@ -5,7 +5,7 @@ import Template from "../components/Template.jsx"
 const ResetPassword =  () => {
 
     return(
-        <div>
+        <div className="reset-password">
             <Template title="Reset Password" button_text="Send Code" navigateTo="/verify-code">
                 <p>Enter your email below to receive your code</p>
                 <div className='input_grp'>
