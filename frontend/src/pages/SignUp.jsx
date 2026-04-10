@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./SignUp.css";
 import Template from "../components/Template.jsx";
+import emailIcon from "../assets/email.png";
+import passwordIcon from "../assets/password.png";
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -30,6 +32,7 @@ const SignUp = () => {
         <div className='input_grp'>
           <label htmlFor="E-mail">E-mail address</label>
           <div className="input-wrapper">
+            <img src={emailIcon} alt="e-mail icon" className='left-icon' />
             <input
               type="email"
               id="E-mail"
@@ -45,6 +48,7 @@ const SignUp = () => {
         <div className='input_grp'>
           <label htmlFor="Password">Password</label>
           <div className="input-wrapper">
+            <img src={passwordIcon} alt="password icon" className='left-icon' />
             <input
               type={showPassword ? 'text' : 'password'}
               id="Password"
@@ -68,6 +72,7 @@ const SignUp = () => {
         <div className='input_grp'>
           <label htmlFor="ConfirmPassword">Confirm password</label>
           <div className="input-wrapper">
+            <img src={passwordIcon} alt="password icon" className='left-icon'/>
             <input
               type={showConfirmPassword ? 'text' : 'password'}
               id="ConfirmPassword"

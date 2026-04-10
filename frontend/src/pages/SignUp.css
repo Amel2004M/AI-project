@@ -8,11 +8,12 @@
 .sign-up input{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 420px;
+    width: 385px;
     height: 35px;
     border-radius: 30px;
     border: 1px solid #363637;
     background: rgba(255, 255, 255, 0.15);
+    padding-left: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +24,6 @@
     color: #939393;
     font-weight: 400;
     line-height: normal;
-    padding-left: 35px;
 }
  
 .sign-up .input_grp {
@@ -31,6 +31,20 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
+}
+
+.input-wrapper{
+    position: relative;
+}
+
+.left-icon {
+  position: absolute;
+  left: 72px;
+  top: 28%;
+  transform: translateX(-58px);
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
 }
 
 .sign-up p{
@@ -42,7 +56,7 @@
 }
 
 .sign-up .SignIn{
-    color: #783B90;
+    color: #72248e;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -52,7 +66,7 @@
 
 .sign-up .eye-btn {
     position: absolute;
-    right: 85px;
+    right: 25px;
     transform: translateY(-28px);
     background: none;
     border: none;
