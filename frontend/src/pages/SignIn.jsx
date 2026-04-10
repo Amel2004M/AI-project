@@ -7,7 +7,7 @@ const SignIn =  () => {
 
     return(
         <div>
-            <Template title="Sign In" button_text="Sign In"  navigateTo="/signup">
+            <Template title="Sign In" button_text="Sign In" navigateTo="/signin">
                 <div className='input_grp'>
                   <label htmlFor="E-mail">E-mail adress</label>
                   <input type="email" id="E-mail" placeholder="Enter your e-mail" />
@@ -15,11 +15,11 @@ const SignIn =  () => {
                 <div className='input_grp'>
                   <label htmlFor="Password">Password</label>
                   <input type="password" id="Password" placeholder="Enter your password" />
-                  <Link to="/forgot-password" className="forgot-link">Forgot password?</Link>
+                  <Link to="/reset-password" className="forgot-link">Forgot password?</Link>
                 </div>
                 
                   <p> Don’t have an account yet?{" "}
-                    <Link to="/SignUp" className="SignUp">Sign Up</Link>
+                    <Link to="/" className="SignUp">Sign Up</Link>
                   </p>
             </Template>
         </div>

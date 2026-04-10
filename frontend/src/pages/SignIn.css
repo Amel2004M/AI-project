@@ -21,6 +21,7 @@ input{
 input::placeholder{
     font-style: normal;
     font-weight: 400;
+    color: #939393;
     line-height: normal;
     padding-left: 35px;
 }
@@ -36,7 +37,7 @@ p{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: normal;
 }
 
@@ -44,8 +45,9 @@ p{
     color: #783B90;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: normal;
+    text-decoration: none;
 }
 
 .forgot-link{
@@ -59,4 +61,5 @@ p{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
