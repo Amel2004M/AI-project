@@ -18,7 +18,7 @@ const SignIn =  () => {
                 </div>
                 
                   <p> Don’t have an account yet?{" "}
-                    <Link to="/" className="SignUp">Sign Up</Link>
+                    <Link to="/SignUp" className="SignUp">Sign Up</Link>
                   </p>
             </Template>
         </div>
