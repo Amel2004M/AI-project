@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import "./SignUp.css"
 import Template from "./component/Template.jsx"
 
@@ -6,7 +7,7 @@ const SignUp =  () => {
 
     return(
         <div>
-            <Template title="Sign Up" button_text="Sign Up">
+            <Template title="Sign Up" button_text="Sign Up" navigateTo="/signin">
                 <div className='input_grp'>
                   <label htmlFor="E-mail">E-mail adress</label>
                   <input type="email" id="E-mail" placeholder="Enter your e-mail" />

@@ -1,11 +1,14 @@
 input{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 420px;
+    width: 70px;
     height: 35px;
     border-radius: 30px;
     border: 1px solid #363637;
     background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
 
 input::placeholder{
@@ -17,7 +20,7 @@ input::placeholder{
  
 .input_grp {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 8px;
   width: 100%;
 }

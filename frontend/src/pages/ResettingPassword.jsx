@@ -6,7 +6,7 @@ const ResettingPassword =  () => {
 
     return(
         <div>
-            <Template title="Reset Password" button_text="Change Password">
+            <Template title="Reset Password" button_text="Change Password" navigateTo="/signin">
                 <div className='input_grp'>
                   <label htmlFor="Password">Password</label>
                   <input type="password" id="Password" placeholder="Enter your password" />

@@ -6,7 +6,7 @@ const ResetPassword =  () => {
 
     return(
         <div>
-            <Template title="Reset Password" button_text="Send Code">
+            <Template title="Reset Password" button_text="Send Code" navigateTo="/verify-code">
                 <p>Enter your email below to receive your code</p>
                 <div className='input_grp'>
                   <label htmlFor="E-mail">E-mail adress</label>
