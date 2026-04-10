@@ -1,0 +1,62 @@
+label{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+}
+
+input{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 420px;
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid #363637;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input::placeholder{
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 35px;
+}
+ 
+.input_grp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+p{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.SignUp{
+    color: #783B90;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.forgot-link{
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    line-height: normal;
+    background: linear-gradient(66deg, rgba(201, 151, 255, 0.66) 37.32%, rgba(103, 232, 255, 0.66) 83.01%, rgba(136, 182, 255, 0.66) 92.7%);
+    margin-right: -250px;
+    margin-top: 5px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

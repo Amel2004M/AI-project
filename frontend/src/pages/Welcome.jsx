@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import "./App.css";
+import "./Welcome.css";
 import BackgroundShape from '../components/BackgroundShape';
 
-const App = () => {
+const Welcome = () => {
   const [animating, setAnimating] = useState(false);
 
   const handleClick = () => {
@@ -60,4 +60,4 @@ const App = () => {
     </body>
   );
 };
-export default App;
+export default Welcome;
