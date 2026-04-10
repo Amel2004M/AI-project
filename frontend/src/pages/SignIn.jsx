@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import "./SignIn.css"
-import Template from "./component/Template.jsx"
+import Template from "../components/Template.jsx"
 
 const SignIn =  () => {
 

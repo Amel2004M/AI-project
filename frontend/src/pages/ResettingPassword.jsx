@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import "./ResettingPassword.css"
-import Template from "./component/Template.jsx"
+import Template from "../components/Template.jsx"
 
 const ResettingPassword =  () => {
 
