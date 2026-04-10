@@ -8,11 +8,12 @@
 .sign-in input{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 420px;
+    width: 385px;
     height: 35px;
     border-radius: 30px;
     border: 1px solid #363637;
     background: rgba(255, 255, 255, 0.15);
+    padding-left: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +24,6 @@
     font-weight: 400;
     color: #939393;
     line-height: normal;
-    padding-left: 35px;
 }
  
 .sign-in .input_grp {
@@ -31,6 +31,16 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
+}
+
+.left-icon-signin {
+  position: absolute;
+  left: 16px;
+  top: 28%;
+  transform: translateX(-2px);
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
 }
 
 .sign-in p{
@@ -62,4 +72,30 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
+}
+
+.sign-in .eye-btn {
+    position: absolute;
+    right: 25px;
+    transform: translateY(-28px);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #939393;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    /* override Template button styles */
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    transition: color 0.2s ease;
+}
+ 
+.sign-in .eye-btn:hover {
+    color: white;
+    box-shadow: none;
 }

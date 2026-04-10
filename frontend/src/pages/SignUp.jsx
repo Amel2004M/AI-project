@@ -32,7 +32,7 @@ const SignUp = () => {
         <div className='input_grp'>
           <label htmlFor="E-mail">E-mail address</label>
           <div className="input-wrapper">
-            <img src={emailIcon} alt="e-mail icon" className='left-icon' />
+            <img src={emailIcon} alt="e-mail icon" className='left-icon-signup' />
             <input
               type="email"
               id="E-mail"
@@ -48,7 +48,7 @@ const SignUp = () => {
         <div className='input_grp'>
           <label htmlFor="Password">Password</label>
           <div className="input-wrapper">
-            <img src={passwordIcon} alt="password icon" className='left-icon' />
+            <img src={passwordIcon} alt="password icon" className='left-icon-signup' />
             <input
               type={showPassword ? 'text' : 'password'}
               id="Password"
@@ -72,7 +72,7 @@ const SignUp = () => {
         <div className='input_grp'>
           <label htmlFor="ConfirmPassword">Confirm password</label>
           <div className="input-wrapper">
-            <img src={passwordIcon} alt="password icon" className='left-icon'/>
+            <img src={passwordIcon} alt="password icon" className='left-icon-signup'/>
             <input
               type={showConfirmPassword ? 'text' : 'password'}
               id="ConfirmPassword"

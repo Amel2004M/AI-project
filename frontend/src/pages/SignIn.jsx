@@ -30,37 +30,42 @@ const SignIn =  () => {
             <Template title="Sign In" button_text="Sign In" navigateTo="/signin">
                 <div className='input_grp'>
                   <label htmlFor="E-mail">E-mail address</label>
-                  <img src={emailIcon} alt="e-mail icon" className='left-icon' />
-                  <input
-                   type="email"
-                   id="E-mail"
-                   value={email}
-                   onChange={e => setEmail(e.target.value)}
-                   placeholder="Enter your e-mail"
-                   autoComplete="email"
-                   required
-                  />
+                  <div className="input-wrapper">
+                    <img src={emailIcon} alt="e-mail icon" className='left-icon-signin' />
+                    <input
+                     type="email"
+                     id="E-mail"
+                     value={email}
+                     onChange={e => setEmail(e.target.value)}
+                     placeholder="Enter your e-mail"
+                     autoComplete="email"
+                     required
+                    />
+                  </div>
+                  
                 </div>
                 <div className='input_grp'>
                   <label htmlFor="Password">Password</label>
-                  <img src={passwordIcon} alt="password icon" className='left-icon' />
-                  <input
-                   type={showPassword ? 'text' : 'password'}
-                   id="Password"
-                   value={password}
-                   onChange={e => setPassword(e.target.value)}
-                   placeholder="Enter your password"
-                   autoComplete="current-password"
-                   required
-                  />
-                  <button
-                   type="button"
-                   className="eye-btn"
-                   onClick={() => setShowPassword(v => !v)}
-                   aria-label={showPassword ? 'Hide password' : 'Show password'}
-                  >
-                  {showPassword ? <EyeClosed /> : <EyeOpen />}
-                  </button>
+                  <div className="input-wrapper">
+                    <img src={passwordIcon} alt="password icon" className='left-icon-signin' />
+                    <input
+                     type={showPassword ? 'text' : 'password'}
+                     id="Password"
+                     value={password}
+                     onChange={e => setPassword(e.target.value)}
+                     placeholder="Enter your password"
+                     autoComplete="current-password"
+                     required
+                    />
+                    <button
+                     type="button"
+                     className="eye-btn"
+                     onClick={() => setShowPassword(v => !v)}
+                     aria-label={showPassword ? 'Hide password' : 'Show password'}
+                    >
+                    {showPassword ? <EyeClosed /> : <EyeOpen />}
+                    </button>
+                  </div>
                   <Link to="/reset-password" className="forgot-link">Forgot password?</Link>
                 </div>
                 

@@ -30,7 +30,7 @@ const ResettingPassword =  () => {
                 <div className='input_grp'>
                   <label htmlFor="Password">Password</label>
                   <div className='input-wrapper'>
-                    <img src={passwordIcon} alt="password icon" className='left-icon' />
+                    <img src={passwordIcon} alt="password icon" className='left-icon-resettingpwd' />
                     <input
                      type={showPassword ? 'text' : 'password'}
                      id="Password"
@@ -54,7 +54,7 @@ const ResettingPassword =  () => {
                 <div className='input_grp'>
                     <label htmlFor="ConfirmPassword">Confirm password</label>
                     <div className="input-wrapper">
-                        <img src={passwordIcon} alt="password icon" className='left-icon'/>
+                        <img src={passwordIcon} alt="password icon" className='left-icon-resettingpwd'/>
                         <input
                             type={showConfirmPassword ? 'text' : 'password'}
                             id="ConfirmPassword"

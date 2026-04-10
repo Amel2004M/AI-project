@@ -12,16 +12,18 @@ const ResetPassword =  () => {
                 <p>Enter your email below to receive your code</p>
                 <div className='input_grp'>
                   <label htmlFor="E-mail">E-mail address</label>
-                  <img src={emailIcon} alt="e-mail icon" className='left-icon' />
-                  <input
-                   type="email"
-                   id="E-mail"
-                   value={email}
-                   onChange={e => setEmail(e.target.value)}
-                   placeholder="Enter your e-mail"
-                   autoComplete="email"
-                   required
-                  />
+                  <div className="input-wrapper">
+                    <img src={emailIcon} alt="e-mail icon" className='left-icon-resetpwd' />
+                    <input
+                     type="email"
+                     id="E-mail"
+                     value={email}
+                     onChange={e => setEmail(e.target.value)}
+                     placeholder="Enter your e-mail"
+                     autoComplete="email"
+                     required
+                    />
+                  </div>
                 </div>
             </Template>
         </div>
