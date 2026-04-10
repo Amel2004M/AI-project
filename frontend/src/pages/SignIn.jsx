@@ -9,7 +9,7 @@ const SignIn =  () => {
         <div className="sign-in">
             <Template title="Sign In" button_text="Sign In" navigateTo="/signin">
                 <div className='input_grp'>
-                  <label htmlFor="E-mail">E-mail adress</label>
+                  <label htmlFor="E-mail">E-mail address</label>
                   <input type="email" id="E-mail" placeholder="Enter your e-mail" />
                 </div>
                 <div className='input_grp'>

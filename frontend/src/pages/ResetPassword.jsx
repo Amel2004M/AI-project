@@ -9,7 +9,7 @@ const ResetPassword =  () => {
             <Template title="Reset Password" button_text="Send Code" navigateTo="/verify-code">
                 <p>Enter your email below to receive your code</p>
                 <div className='input_grp'>
-                  <label htmlFor="E-mail">E-mail adress</label>
+                  <label htmlFor="E-mail">E-mail address</label>
                   <input type="email" id="E-mail" placeholder="Enter your e-mail" />
                 </div>
             </Template>
