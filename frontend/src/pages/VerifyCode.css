@@ -1,0 +1,67 @@
+.verify-code input{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 35px;
+    height: 35px;
+    border-radius: 15px;
+    border: 1px solid #363637;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-left: 36px;
+}
+
+.verify-code input::placeholder{
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.verify-code .code-inputs {
+    display: flex;
+    flex-direction: row; /* Make them horizontal */
+    gap: 12px; /* Space between inputs */
+    justify-content: center; /* Center them horizontally */
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+ 
+.verify-code .input_grp {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+}
+
+.verify-code p{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.verify-code .text{
+    position: absolute;
+    top: 290px;
+}
+
+.verify-code .ResendCode{
+    color: #7BEBFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: transparent !important; /* Force transparent background */
+    box-shadow: none !important; /* Remove any gradient shadow */
+    transform: none; /* Remove animation */
+    text-decoration: none;
+}
+
+/* To fix button issue */
+.verify-code button {
+    margin-top: 20px !important;  /* Override the 68px from Template */
+    
+}

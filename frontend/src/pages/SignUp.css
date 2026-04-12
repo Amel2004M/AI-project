@@ -1,0 +1,91 @@
+.sign-up label{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sign-up input{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 385px;
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid #363637;
+    background: rgba(255, 255, 255, 0.15);
+    padding-left: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up input::placeholder{
+    font-style: normal;
+    color: #939393;
+    font-weight: 400;
+    line-height: normal;
+}
+ 
+.sign-up .input_grp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.input-wrapper{
+    position: relative;
+}
+
+.left-icon-signup{
+  position: absolute;
+  left: 72px;
+  top: 28%;
+  transform: translateX(-58px);
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+}
+
+.sign-up p{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sign-up .SignIn{
+    color: #72248e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.sign-up .eye-btn {
+    position: absolute;
+    right: 25px;
+    transform: translateY(-28px);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #939393;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    /* override Template button styles */
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    transition: color 0.2s ease;
+}
+ 
+.sign-up .eye-btn:hover {
+    color: white;
+    box-shadow: none;
+}

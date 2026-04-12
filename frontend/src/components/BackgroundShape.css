@@ -1,0 +1,61 @@
+.background {
+  position: fixed;
+  inset: 0; /* it makes sure that background fits perfectly my screen */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* BOTTOM SHAPES */
+.shape1 {
+  width: 100%;
+  height: 80px;
+  fill: #6297EC;
+  stroke-width: 1px;
+  stroke: #6297EC;
+  filter: blur(25px);
+  position: absolute;
+  bottom: 200px;
+  left: -8px;
+}
+
+.shape2 {
+  width: 104%;
+  height: 40px;
+  fill: #FF5CAB;
+  stroke-width: 0.958px;
+  stroke: #6297EC;
+  filter: blur(25px);
+  position: absolute;
+  bottom: 220px;
+  left: -29px;
+}
+
+.shape3 {
+  width: 97%;
+  height: 3px;
+  fill: #7F08FF;
+  stroke-width: 0.897px;
+  stroke: #6297EC;
+  filter: blur(25px);
+  position: absolute;
+  bottom: 227px;
+  left: 19px;
+}
+
+.shape4 {
+  width: 100%;
+  height: 1px;
+  fill: #02D9FF;
+  stroke-width: 0.832px;
+  stroke: #6297EC;
+  filter: blur(30px);
+  position: absolute;
+  bottom: 170px;
+  left: 0px;
+}
+
+.shape1 svg, .shape2 svg, .shape3 svg, .shape4 svg {
+      width: 100%;
+      height: auto;
+      display: block;
+}

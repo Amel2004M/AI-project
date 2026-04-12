@@ -1,1 +1,1 @@
-# AI-project
+# AI-project summarize a text with LLM 
