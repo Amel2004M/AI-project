@@ -1,0 +1,10 @@
+﻿Large Language Models (LLMs) represent a significant advancement in Artificial Intelligence, specifically within the field of Natural Language Processing (NLP). These models, such as GPT-4 or Llama 3, are built upon the Transformer architecture, which utilizes a mechanism called "self-attention" to weigh the significance of different words in a sentence.
+
+
+The "Base Knowledge" of an LLM is primarily acquired during the pre-training phase. During this stage, the model is exposed to massive datasets containing books, articles, and websites. This allows the model to learn not only grammar and syntax but also world facts, reasoning patterns, and cultural nuances. 
+
+
+However, LLMs have a "knowledge cutoff," meaning they are unaware of events occurring after their last training update. To solve this, researchers use Retrieval-Augmented Generation (RAG). RAG allows the model to query an external knowledge base—like a local database or a specific set of documents—to retrieve up-to-date or private information before generating a response. 
+
+
+When summarizing a text, the LLM acts as a reasoning engine. It compares the input text against its internal parametric knowledge to identify core concepts while filtering out redundant information. This synergy between internal training and external data retrieval is what makes modern AI systems highly effective for complex summarization tasks.
