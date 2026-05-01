@@ -5,6 +5,7 @@ import SignIn from './pages/SignIn.jsx';
 import ResetPassword from './pages/ResetPassword.jsx';
 import VerifyCode from './pages/VerifyCode.jsx';
 import ResettingPassword from './pages/ResettingPassword.jsx';
+import Chat from './pages/Chat.jsx'
 
 const router = createBrowserRouter([
   { path: "/",                   element: <SignUp /> },
@@ -12,7 +13,10 @@ const router = createBrowserRouter([
   { path: "/reset-password",     element: <ResetPassword /> },
   { path: "/verify-code",        element: <VerifyCode /> },
   { path: "/resetting-password", element: <ResettingPassword /> },
+  
+ { path: "/chat", element: <Chat /> },
 ]);
+
 
 const App = () => {
   return <RouterProvider router={router} />;
