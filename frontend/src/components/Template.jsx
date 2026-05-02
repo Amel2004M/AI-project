@@ -1,23 +1,20 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import "./Template.css";
 import BackgroundShape from '../components/BackgroundShape';
 
-const Template = ({title, children, button_text, naviagateTo}) =>{
-     const navigate = useNavigate();
-
-    return(
+const Template = ({ title, children, button_text, onSubmit }) => {
+    return (
         <div>
-            <BackgroundShape></BackgroundShape>
+            <BackgroundShape />
             <div className="card">
-             <h1>{title}</h1>
+                <h1>{title}</h1>
 
-             {children}
-        
-             <button onClick={() => navigateTo && navigate(navigateTo)}>
-               {button_text}
-             </button>
-            </div>  
+                {children}
+
+                <button onClick={onSubmit}>
+                    {button_text}
+                </button>
+            </div>
         </div>
     );
 };

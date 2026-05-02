@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import "./SignUp.css";
 import Template from "../components/Template.jsx";
 import emailIcon from "../assets/email.png";
 import passwordIcon from "../assets/password.png";
 
+const API_BASE_URL = "http://localhost:8000";
+
 const SignUp = () => {
+
+   const navigate = useNavigate();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
   const EyeOpen = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -26,9 +35,49 @@ const SignUp = () => {
     </svg>
   );
 
+  const handleRegister = async (e) => {
+    if (e) e.preventDefault();
+    setError('');
+    setSuccess('');
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+    //used auth.py
+    try {
+      const response = await axios.post(`${API_BASE_URL}/auth/register`, {
+        email: email,
+        password: password,
+        fullname: email.split('@')[0] 
+      });
+
+      if (response.status === 201) {
+        //in the back we need to navigate to signin before chat that's the only solution i found 
+        setSuccess("Account created! Please check your email to verify your account before logging in.");
+        setTimeout(() => navigate("/signin"), 5000);
+      }
+    } catch (err) {
+      const errorMsg = err.response?.data?.det || err.response?.data?.detail || "Registration failed.";
+      setError(errorMsg);
+    }
+  };
+
   return (
     <div className="sign-up">
-      <Template title="Sign Up" button_text="Sign Up" navigateTo="/signin">
+      <Template title="Sign Up" button_text="Sign Up" onButtonClick={handleRegister}>
+        {error && <p className="error-msg" >{error}</p>}
+        {success && <p className="success-msg" >{success}</p>}
+        {success && ( <button className="resend-btn" onClick={async () => {
+          try {
+          await axios.post(`${API_BASE_URL}/auth/resend-verification`, { email: email });
+          alert("Verification email sent again.");
+          } catch (err) {
+          alert( err.response?.data?.detail || "Failed to resend verification email.");
+          }
+         }}> Resend verification emai </button>
+        )}
+
         <div className='input_grp'>
           <label htmlFor="E-mail">E-mail address</label>
           <div className="input-wrapper">
@@ -76,7 +125,10 @@ const SignUp = () => {
             <input
               type={showConfirmPassword ? 'text' : 'password'}
               id="ConfirmPassword"
+              value={confirmPassword}
+              onChange={e => setConfirmPassword(e.target.value)}
               placeholder="Confirm your password"
+              autoComplete="new-password"
               required
             />
             <button

@@ -89,3 +89,21 @@
     color: white;
     box-shadow: none;
 }
+
+.error-msg { color: #f25757; text-align: center; font-size: 13px; margin-bottom: 10px;}
+.success-msg { color: #a70cb9; text-align: center; font-size: 13px; margin-bottom: 10px }
+
+.resend-btn{
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #ffffff50;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.resend-btn:hover{
+  background: rgba(255,255,255,0.1);
+}

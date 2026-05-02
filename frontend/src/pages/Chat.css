@@ -463,3 +463,77 @@ textarea {
     display: block;
     max-width: 180px;      
 }
+
+.app-container .profile-image-navbar {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.app-container .popup-avatar-clickable {
+    cursor: pointer;
+}
+
+.app-container .popup-avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.app-container .hidden-input {
+    display: none;
+}
+
+.app-container .sidebar-spacing {
+    margin-top: 20px;
+}
+
+.app-container .history-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.app-container .history-icon {
+    width: 14px;
+    margin-right: 10px;
+    opacity: 0.6;
+}
+
+.app-container .history-title {
+    font-size: 13px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app-container .empty-history-text {
+    font-size: 12px;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.app-container .signin-history-text {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 10px;
+}
+
+.app-container .attach-clickable {
+    cursor: pointer;
+}
+
+.app-container .action-clickable {
+    cursor: pointer;
+}
+
+.app-container .result-display-area {
+    padding: 20px;
+    color: white;
+    overflow-y: auto;
+}

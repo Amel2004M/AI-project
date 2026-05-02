@@ -99,3 +99,7 @@
     color: white;
     box-shadow: none;
 }
+
+
+
+.errormsg {color: #ff4d4d; text-align: center; font-size: 14px;}

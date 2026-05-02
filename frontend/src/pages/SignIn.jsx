@@ -1,14 +1,21 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import axios from "axios";
+import { Link, useNavigate } from 'react-router-dom';
 import "./SignIn.css"
 import Template from "../components/Template.jsx"
 import emailIcon from "../assets/email.png";
 import passwordIcon from "../assets/password.png";
 
+const API_BASE_URL = "http://localhost:8000";
+
 const SignIn =  () => {
+
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
 
   const EyeOpen = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -25,9 +32,46 @@ const SignIn =  () => {
     </svg>
   );
 
+    const handleLogin = async (e) => {
+    if (e) e.preventDefault();
+    setError('');
+    //used auth.py
+    try {
+      const response = await axios.post(`${API_BASE_URL}/auth/login`, {
+        email: email,
+        password: password
+      });
+
+      if (response.data.access_token) {
+        localStorage.setItem("token", response.data.access_token);
+        localStorage.setItem("username", response.data.user_name);
+        localStorage.setItem("role", response.data.user_role);
+        localStorage.setItem("refresh_token", response.data.refresh_token);
+        
+        navigate("/chat"); 
+      }
+    } catch (err) {
+    const errorMsg =
+    err.response?.data?.detail ||
+    err.response?.data?.det ||
+    "Invalid email or password.";
+    if (
+    errorMsg.toLowerCase().includes("not been verified")
+    ) {
+    setError(
+      "Your email is not verified. Please check your inbox before logging in."
+    );
+    }
+    else {
+    setError(errorMsg);
+    }
+    } 
+   };
+
     return(
         <div className="sign-in">
-            <Template title="Sign In" button_text="Sign In" navigateTo="/signin">
+            <Template title="Sign In" button_text="Sign In" onButtonClick={handleLogin}>
+              {error && <p className="errormsg" >{error}</p>}
                 <div className='input_grp'>
                   <label htmlFor="E-mail">E-mail address</label>
                   <div className="input-wrapper">
